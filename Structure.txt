@@ -1,0 +1,9 @@
+1 -> Créer les vues ;
+
+2 -> Créer le model et la migration de l'admin (tout en insérant en dure le "username" et le "password") ;
+
+3 -> Créer le model et la migration des utilisateurs ;
+
+4 -> Créer le controleur de l'admin ;
+
+5 -> Gérer la connexion de l'admin ;

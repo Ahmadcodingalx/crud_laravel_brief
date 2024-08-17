@@ -1,0 +1,30 @@
+<?php
+
+header('Content-Type: application/json');
+
+// Durée du compte à rebours en secondes (exemple: 60 secondes)
+$time = 600;
+
+// Calculer le temps restant
+$startTime = Session::get('start_time', time());
+$timeElapsed = time() - $startTime;
+$timeRemaining = max($time - $timeElapsed, 0);
+
+// Convertir le temps restant en heures, minutes et secondes
+$hours = floor($timeRemaining / 3600);
+$minutes = floor(($timeRemaining % 3600) / 60);
+$seconds = $timeRemaining % 60;
+
+// $data = [
+//     'hours' => $hours,
+//     'minutes' => $minutes,
+//     'seconds' => $seconds,
+// ];
+
+// return response()->json($data);
+
+echo json_encode([
+    'hours' => $hours,
+    'minutes' => $minutes,
+    'seconds' => $seconds,
+]);
