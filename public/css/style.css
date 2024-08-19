@@ -10,6 +10,7 @@
     --error-dark-color: #a12424;
     --side-bar-width: 15%;
     --side-bar-padding: 20px;
+    --app-bar-padding: 10px;
     --input-border-radius: 8px;
 }
 
@@ -43,7 +44,9 @@ a:hover {
 }
 
 .app-bar {
-    padding: var(--side-bar-padding);
+    padding: var(--app-bar-padding);
+    margin-top: 10px;
+    margin-right: 20px;
     position: fixed;
     right: 0;
     /* width: 100%; */
@@ -261,6 +264,11 @@ select:focus {
     transition-duration: 500ms;
 }
 
+.user-name {
+  color: #0099ff;
+  font-family: roboto-bold;
+}
+
 .stripe1 {
   background-color: #fff6a2;
 }
@@ -382,6 +390,11 @@ textarea {
 @font-face {
     font-family: roboto-black;
     src: url(../assets/fonts/roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(../assets/fonts/roboto/Roboto-Bold.ttf);
 }
 
 
@@ -1835,4 +1848,98 @@ button:active {
 .cards1:hover > .Option:not(:hover) {
   filter: blur(1px);
   transform: scale(0.9, 0.9);
+}
+
+
+/*----------------------------------------------tete-change-styles------------------------------------------
+
+/* From Uiverse.io by kennyotsu */ 
+.card222 {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: transparent;
+  background-color: var(--bg-color);
+  /* padding: 1rem 2rem; */
+  /* border-radius: 1.25rem; */
+}
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  /* -webkit-box-sizing: content-box; */
+  /* box-sizing: content-box; */
+  height: 40px;
+  /* padding: 10px 10px; */
+  display: -webkit-box;
+  text-align: center;
+  /* display: -ms-flexbox; */
+  /* display: flex; */
+  /* border-radius: 8px; */
+}
+
+.words {
+  overflow: hidden;
+  /* position: relative; */
+}
+.words::after {
+  /* content: ""; */
+  /* position: absolute; */
+  /* inset: 0; */
+  /* background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  ); */
+  /* z-index: 20; */
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 320px;
+  color: #956afa;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
 }

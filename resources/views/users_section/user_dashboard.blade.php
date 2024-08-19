@@ -6,7 +6,7 @@
     <div class="wrap-content">
         @include('includes.appbar')
 
-        <br /><br /><br />
+        <br /><br /><br /><br /><br />
 
         @php
             $user = Auth::user();
@@ -14,7 +14,7 @@
 
         <div class="container">
             <div class="border datatable-cover">
-                <h2>Bienvenue {{ $user->name }} sur votre page d'acceuil, vous êtes un simple utilisateur</h2>
+                <h3>Bienvenue <span class="user-name">{{ $user->name }}</span> sur votre page d'acceuil, vous êtes un simple utilisateur</h3>
             </div>
         </div>
     </div>

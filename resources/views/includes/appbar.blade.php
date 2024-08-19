@@ -1,6 +1,6 @@
 <header class="app-bar">
     <table width="100%">
-        <tr>
+        <tr class="card222">
             @php
                 $user = Auth::user();
             @endphp
@@ -18,6 +18,18 @@
                     </a>
                 </td>
             @endif
+
+            <td class="loader">
+                {{-- <p>loading</p> --}}
+                <ul class="words">
+                    <span class="word">buttons</span>
+                    <span class="word">forms</span>
+                    <span class="word">switches</span>
+                    <span class="word">cards</span>
+                    <span class="word">buttons</span>
+                </ul>
+            </td>
+
 
             <td class="text-right">
                 <a href="{{ route('admin_login') }}">
