@@ -18,9 +18,9 @@
                     </a>
                 </td>
             @endif
-
+{{-- 
             <td class="loader">
-                {{-- <p>loading</p> --}}
+                <p>loading</p>
                 <ul class="words">
                     <span class="word">buttons</span>
                     <span class="word">forms</span>
@@ -28,7 +28,7 @@
                     <span class="word">cards</span>
                     <span class="word">buttons</span>
                 </ul>
-            </td>
+            </td> --}}
 
 
             <td class="text-right">

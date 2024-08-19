@@ -15,6 +15,12 @@
                     <li>{{ $message }}</li>
                 </ul>
             @endif
+
+            @if ($message = Session::get('error'))
+                <ul class="alert alert-danger">
+                    <li>{{ $message }}</li>
+                </ul>
+            @endif
             
             <div class="row justify-content-center">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5">

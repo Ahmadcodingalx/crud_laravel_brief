@@ -21,7 +21,9 @@
                                 </ul>
                             @endif
                             @if ($message = Session::get('error'))
-                                <div>{{ $message }}</div><br />
+                                <ul class="alert alert-danger">
+                                    <li>{{ $message }}</li>
+                                </ul>
                             @endif
                             <input type="text" value="{{ old('username') }}" class="input" name="username" id="username" placeholder="Saisir le nom d'utilisateur ici ..."/>
                             <input

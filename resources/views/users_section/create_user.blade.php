@@ -136,7 +136,9 @@
                                 </ul>
                             @endif
                             @if ($message = Session::get('error'))
-                                <div>{{ $message }}</div><br />
+                                <ul class="alert alert-danger">
+                                    <li>{{ $message }}</li>
+                                </ul>
                             @endif
                             {{-- <label for="name">Nom</label> --}}
                             <input type="text" value="{{ old('name') }}" class="input" name="name" id="name" placeholder="Nom ..."/>
