@@ -52,7 +52,7 @@
                                             <i class="fas fa-pen-to-square" style="color: #FFF"></i>
                                         </a>
                                         &nbsp;
-                                        <form class="d-inline" action="{{ route('users_section.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr(e) de vouloir supprimer la catégorie {{ $user->name }} ? Cette action sera irréversible !')">
+                                        <form class="d-inline" action="{{ route('users_section.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr(e) de vouloir supprimer {{ $user->name }} ? Cette action sera irréversible !')">
                                             @csrf
                                             @method("DELETE")
                                             {{-- <button class="delete-button">

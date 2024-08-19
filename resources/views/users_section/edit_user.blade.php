@@ -64,7 +64,7 @@
 
                             <label class="inline-checkbox">
                                 Changer le mot de passe &nbsp;
-                                <input type="checkbox" id="checkboxInput">
+                                <input type="checkbox" id="checkboxInput" name="new_password">
                                 <label for="checkboxInput" class="toggleSwitch">
                                 </label>
                                 {{-- <label class="container_checkbox">

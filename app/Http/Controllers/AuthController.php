@@ -28,21 +28,18 @@ class AuthController extends Controller
 
         $users = User::where('username', $request->username)->first();
 
-        if($users) {
-            if ($this->AuthInterface->login($data)) {
-                if ($users->status == 1) {
-                    return redirect()->route('admin_dashboard');
-                }
-
-                return redirect()->route('users_section.user_dashboard', [
-                    'user' => $users
-                ]);
-            } else {
-                return back()->with('error', 'email ou mot de passe incorrect');
+        if ($this->AuthInterface->login($data)) {
+            if ($users->status == 1) {
+                return redirect()->route('admin_dashboard');
             }
+
+            return redirect()->route('users_section.user_dashboard', [
+                'user' => $users
+            ]);
         } else {
-            return back()->with('error', 'Utilisateur non trouvé');
+            return back()->with('error', 'nom d\'utilisateur ou mot de passe incorrect');
         }
+        
         // try {
         // } catch (\Exception $ex) {
         //     return back()->with('error', 'Une erreur est survenue lors du traitement, Réessayez !');

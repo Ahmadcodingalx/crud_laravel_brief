@@ -140,6 +140,11 @@
                                     <li>{{ $message }}</li>
                                 </ul>
                             @endif
+                            @if ($message = Session::get('success'))
+                                <ul class="alert alert-success">
+                                    <li>{{ $message }}</li>
+                                </ul>
+                            @endif
                             {{-- <label for="name">Nom</label> --}}
                             <input type="text" value="{{ old('name') }}" class="input" name="name" id="name" placeholder="Nom ..."/>
                             

@@ -64,7 +64,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => $request->password,
             'username' => $request->username,
-            'if_update' => 1,
+            'if_update' => 0,
         ];
         
         Mail::to($request->email)->send(new OtpCodeEmail($request->name, $otpCode['password'], $otpCode['username'], $otpCode['if_update']));
@@ -144,6 +144,6 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete();
         
-        return back()->with("success", "Votre produit a été supprimé avec succès !");
+        return back()->with("success", "L'utilisateur a été supprimé avec succès !");
     }
 }
