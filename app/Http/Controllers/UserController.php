@@ -56,34 +56,25 @@ class UserController extends Controller
 
         DB::beginTransaction();
 
-        $this->userInterface->store($data);
-
+        
         DB::commit();
         
-
+        
         $otpCode = [
             'email' => $request->email,
             'password' => $request->password,
             'username' => $request->username,
             'if_update' => 1,
         ];
-
-        // User::where('email', $request->email)->delete();
-        // User::create($otpCode);
-        // session()->put('email', $request->email);
-        Mail::to($request->email)->send(new OtpCodeEmail($request->name, $otpCode['password'], $otpCode['username'], $otpCode['if_update']));
-        // if ($user) {
-        // }
-
         
-        // return ResponseClass::success();
+        Mail::to($request->email)->send(new OtpCodeEmail($request->name, $otpCode['password'], $otpCode['username'], $otpCode['if_update']));
+        
         try {
-            // Auth::login($user);
+            $this->userInterface->store($data);
 
             return back()->with('success', 'Utilisateur créer avec succès.');
         } catch (\Throwable $th) {
             return back()->with('error', 'Une erreur est survenue lors du traitement, Réessayez !');
-            // return ResponseClass::rollback();
         }
     }
 
@@ -115,6 +106,7 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => $request->password,
             'username' => $request->username,
+            'name' => $request->name,
             'if_update' => 1,
         ];
         

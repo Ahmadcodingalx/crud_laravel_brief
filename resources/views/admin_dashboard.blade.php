@@ -36,10 +36,9 @@
             <div class="border datatable-cover">
                 <h2>Bienvenue {{ $user->name }} sur votre page d'acceuil, vous êtes administrateur</h2>
             </div>
-
-            {{-- <h1>Compte à Rebours</h1>
-            <div id="countdown">Chargement...</div> --}}
+            
         </div>
+        
     </div>
 @endsection
 
